@@ -1,24 +1,553 @@
 {
   "intents": [
+
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "Good morning"],
-      "responses": ["Hello!", "Hi there!", "Hey!"]
+      "patterns": [
+        "hi", "hello", "hey", "hi there", "hello there", "good morning",
+        "good afternoon", "good evening", "what's up", "howdy", "sup",
+        "hiya", "yo", "greetings", "hey bot", "hello bot"
+      ],
+      "responses": [
+        "Hello! 😊 How can I help you today?",
+        "Hey there! What's on your mind?",
+        "Hi! I'm SmartBot. Ask me anything!",
+        "Greetings! How can I assist you today?"
+      ]
     },
+
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you", "Goodbye"],
-      "responses": ["Bye!", "Take care!", "See you soon!"]
+      "patterns": [
+        "bye", "goodbye", "see you", "see ya", "take care", "later",
+        "good night", "talk to you later", "catch you later", "i am leaving",
+        "i have to go", "i'm going now", "farewell", "cya"
+      ],
+      "responses": [
+        "Goodbye! Have a great day! 👋",
+        "See you later! Take care! 😊",
+        "Bye! Come back if you need help! 🚀",
+        "Farewell! Keep learning and growing! 💪"
+      ]
     },
+
     {
-      "tag": "name",
-      "patterns": ["What is your name?", "Who are you?"],
-      "responses": ["I am your AI chatbot!", "You can call me SmartBot."]
+      "tag": "thanks",
+      "patterns": [
+        "thanks", "thank you", "thanks a lot", "thank you so much",
+        "many thanks", "cheers", "much appreciated", "that helped",
+        "that was helpful", "you are helpful", "nice one", "great help"
+      ],
+      "responses": [
+        "You're welcome! 😊",
+        "Happy to help! Let me know if you need anything else.",
+        "Anytime! That's what I'm here for 🤖",
+        "Glad I could help! 🙌"
+      ]
     },
+
     {
-      "tag": "help",
-      "patterns": ["Help me", "I need help", "Can you help?"],
-      "responses": ["Sure! How can I assist you?", "I'm here to help!"]
+      "tag": "bot_identity",
+      "patterns": [
+        "who are you", "what are you", "are you a bot", "are you human",
+        "what is your name", "tell me about yourself", "introduce yourself",
+        "are you an ai", "what can you do", "who made you", "who created you",
+        "what are your abilities", "what do you do"
+      ],
+      "responses": [
+        "I'm SmartBot 🤖 — an AI-powered chatbot that can answer almost anything!",
+        "I'm SmartBot! I use AI to help you with questions on any topic.",
+        "I am SmartBot, your personal AI assistant. Ask me anything! 😊"
+      ]
+    },
+
+    {
+      "tag": "how_are_you",
+      "patterns": [
+        "how are you", "how are you doing", "how do you feel", "are you okay",
+        "you good", "how's it going", "how are things", "you doing okay",
+        "are you fine", "what's up with you"
+      ],
+      "responses": [
+        "I'm doing great, thanks for asking! 😊 How about you?",
+        "All systems running smoothly! 🤖 How can I help?",
+        "Fantastic! Ready to help you with anything. What do you need?"
+      ]
+    },
+
+    {
+      "tag": "study_tips",
+      "patterns": [
+        "how to study", "study tips", "how to study better", "improve focus",
+        "improve concentration", "how to learn fast", "best study method",
+        "how to remember things", "tips for studying", "study techniques",
+        "how to prepare for exams", "how to study effectively",
+        "i can't concentrate", "how to focus while studying",
+        "study hacks", "memorization tips"
+      ],
+      "responses": [
+        "Try the Pomodoro technique: 25 min study, 5 min break! ⏱️ It keeps your mind fresh.",
+        "Revise before sleeping — your brain consolidates memory overnight 🧠",
+        "Active recall beats re-reading. Test yourself frequently instead of just reading notes!",
+        "Break your syllabus into small chunks and study one chunk at a time 📚",
+        "Teach what you learn to someone else — it's the best way to master a topic! 🎓"
+      ]
+    },
+
+    {
+      "tag": "exam_preparation",
+      "patterns": [
+        "exam tips", "how to prepare for exam", "exam preparation",
+        "scared of exams", "exam stress", "how to pass exam",
+        "exam is tomorrow", "last minute study", "exam revision",
+        "how to score good marks", "how to get good grades",
+        "tips for exam", "exam strategy", "how to crack exam"
+      ],
+      "responses": [
+        "Focus on important topics first, then revise with previous year papers! 📝",
+        "Don't panic! Revise your notes, sleep well, and eat properly before the exam 💪",
+        "Practice mock tests under timed conditions — it builds speed and confidence! ⏱️",
+        "Make a revision schedule and stick to it. Consistency beats cramming! 📅"
+      ]
+    },
+
+    {
+      "tag": "motivation",
+      "patterns": [
+        "motivate me", "i feel low", "i give up", "need motivation",
+        "feeling sad", "i am tired", "i am stressed", "i feel demotivated",
+        "i want to quit", "i can't do this", "life is hard",
+        "i am struggling", "feeling lost", "i feel hopeless",
+        "inspire me", "i need inspiration", "i am losing hope",
+        "nothing is working", "i am failing"
+      ],
+      "responses": [
+        "Every expert was once a beginner. Keep going! 💪",
+        "Small progress is still progress. Don't stop! 🚀",
+        "You're capable of amazing things. Believe in yourself! ⭐",
+        "Tough times don't last, tough people do. Stay strong! 🔥",
+        "Success is not final, failure is not fatal — it's the courage to continue that counts! 🏆",
+        "Rome wasn't built in a day. Keep working and trust the process! 🌱"
+      ]
+    },
+
+    {
+      "tag": "career_guidance",
+      "patterns": [
+        "career advice", "career guidance", "what career should i choose",
+        "how to get a job", "career options", "career path",
+        "best career in technology", "how to start a career",
+        "career in it", "career in software", "job advice",
+        "which field to choose", "career after graduation",
+        "what to do after college", "how to choose a career"
+      ],
+      "responses": [
+        "Focus on building strong skills, work on real projects, and keep learning consistently! 🎯",
+        "Identify your interest, build relevant skills, create a portfolio, and network actively 💼",
+        "The best career is the one that aligns your passion with market demand. Explore options! 🚀",
+        "Internships and personal projects are gold — they matter more than marks to most companies! 💡"
+      ]
+    },
+
+    {
+      "tag": "placement_prep",
+      "patterns": [
+        "how to get placed", "placement tips", "placement preparation",
+        "how to crack interview", "interview tips", "technical interview",
+        "how to prepare for placement", "campus placement",
+        "off campus placement", "how to get internship",
+        "dsa for placement", "coding interview tips",
+        "hr interview tips", "aptitude test tips"
+      ],
+      "responses": [
+        "Focus on DSA (Data Structures & Algorithms), projects, and communication skills! 💻",
+        "Practice coding on LeetCode or HackerRank daily. Consistency is key! 🔑",
+        "For HR interviews: be confident, know your resume well, and prepare a good self-introduction! 🗣️",
+        "Build 2-3 strong projects and deploy them. Recruiters love seeing real work! 🛠️"
+      ]
+    },
+
+    {
+      "tag": "programming_general",
+      "patterns": [
+        "how to learn programming", "best programming language",
+        "programming tips", "how to code", "coding tips",
+        "how to improve coding skills", "which language to learn first",
+        "programming for beginners", "how to start coding",
+        "learn to code", "coding help", "i want to learn programming"
+      ],
+      "responses": [
+        "Start with Python — it's beginner-friendly and widely used! 🐍",
+        "Practice daily, build projects, and don't just watch tutorials — code along! 💻",
+        "Pick one language, master the basics, then build real projects. That's the fastest path! 🚀",
+        "The best language is the one you practice every day. Consistency beats everything! 🔥"
+      ]
+    },
+
+    {
+      "tag": "python",
+      "patterns": [
+        "tell me about python", "what is python", "python programming",
+        "why use python", "python language", "is python good",
+        "uses of python", "python for beginners", "python career",
+        "python libraries", "python vs java", "learn python"
+      ],
+      "responses": [
+        "Python is widely used in AI, web development, data science, and automation! 🐍",
+        "Python is beginner-friendly with simple syntax. Libraries like NumPy, Pandas, and TensorFlow make it powerful! 💡",
+        "Python is one of the most in-demand languages. Great choice for AI/ML and web development! 🚀"
+      ]
+    },
+
+    {
+      "tag": "java",
+      "patterns": [
+        "what is java", "tell me about java", "java programming",
+        "why use java", "java language", "java for beginners",
+        "java career", "java vs python", "learn java",
+        "uses of java", "java applications"
+      ],
+      "responses": [
+        "Java is an object-oriented language used in enterprise apps, Android, and backend development! ☕",
+        "Java follows 'Write Once Run Anywhere' — it runs on any device with a JVM! 💡",
+        "Java is great for Android development and large-scale backend systems! 🚀"
+      ]
+    },
+
+    {
+      "tag": "javascript",
+      "patterns": [
+        "what is javascript", "tell me about javascript", "javascript programming",
+        "why use javascript", "learn javascript", "javascript uses",
+        "javascript vs python", "js tutorial", "node js",
+        "frontend development", "web development language"
+      ],
+      "responses": [
+        "JavaScript is the language of the web — used in frontend (React) and backend (Node.js)! 🌐",
+        "JS is essential for web development. It makes websites interactive and dynamic! 💡",
+        "With JavaScript, you can build websites, mobile apps (React Native), and servers (Node.js)! 🚀"
+      ]
+    },
+
+    {
+      "tag": "html_css",
+      "patterns": [
+        "what is html", "what is css", "learn html", "learn css",
+        "html tutorial", "css tutorial", "html and css",
+        "how to make a website", "web design basics",
+        "html for beginners", "what does html do"
+      ],
+      "responses": [
+        "HTML is the structure of web pages, CSS is the styling — together they create beautiful websites! 🌐",
+        "HTML stands for HyperText Markup Language. It defines the content and layout of web pages! 💡",
+        "Start with HTML and CSS to build static websites, then add JavaScript for interactivity! 🚀"
+      ]
+    },
+
+    {
+      "tag": "artificial_intelligence",
+      "patterns": [
+        "what is ai", "tell me about ai", "artificial intelligence",
+        "ai explanation", "how does ai work", "ai applications",
+        "ai uses", "ai in real life", "future of ai",
+        "ai vs human", "what can ai do", "ai technology"
+      ],
+      "responses": [
+        "AI is the simulation of human intelligence in machines — enabling them to think and learn! 🤖",
+        "AI powers voice assistants, recommendation systems, self-driving cars, and much more! 💡",
+        "AI includes areas like Machine Learning, Deep Learning, NLP, and Computer Vision! 🚀"
+      ]
+    },
+
+    {
+      "tag": "machine_learning",
+      "patterns": [
+        "what is machine learning", "tell me about machine learning",
+        "ml explanation", "how does ml work", "machine learning uses",
+        "ml vs ai", "learn machine learning", "ml algorithms",
+        "what is deep learning", "neural networks",
+        "ml applications", "ml career"
+      ],
+      "responses": [
+        "Machine Learning allows computers to learn from data and improve without being explicitly programmed! 🤖",
+        "ML includes supervised, unsupervised, and reinforcement learning. Start with Python + scikit-learn! 💡",
+        "Deep Learning is a subset of ML that uses neural networks — it powers image and speech recognition! 🧠"
+      ]
+    },
+
+    {
+      "tag": "data_science",
+      "patterns": [
+        "what is data science", "data science career", "learn data science",
+        "data science vs ml", "data analyst", "data science skills",
+        "how to become data scientist", "data science roadmap",
+        "big data", "data science tools", "data science salary"
+      ],
+      "responses": [
+        "Data Science combines statistics, programming, and domain knowledge to extract insights from data! 📊",
+        "Learn Python, SQL, Pandas, Matplotlib, and machine learning to start in data science! 💡",
+        "Data Science is one of the highest-paying careers. Start with Python and statistics! 🚀"
+      ]
+    },
+
+    {
+      "tag": "cybersecurity",
+      "patterns": [
+        "what is cybersecurity", "learn cybersecurity", "cyber security career",
+        "ethical hacking", "how to become ethical hacker",
+        "cybersecurity tips", "how to stay safe online",
+        "what is hacking", "network security", "cybersecurity roadmap"
+      ],
+      "responses": [
+        "Cybersecurity protects systems, networks, and data from digital attacks! 🔐",
+        "To start in cybersecurity, learn networking, Linux, and ethical hacking tools like Kali Linux! 💡",
+        "Stay safe online: use strong passwords, enable 2FA, and never click suspicious links! 🛡️"
+      ]
+    },
+
+    {
+      "tag": "cloud_computing",
+      "patterns": [
+        "what is cloud computing", "cloud computing explanation",
+        "learn cloud computing", "cloud career", "aws vs azure",
+        "google cloud", "amazon aws", "what is aws",
+        "cloud computing uses", "cloud computing benefits"
+      ],
+      "responses": [
+        "Cloud Computing delivers computing services (storage, servers, databases) over the internet! ☁️",
+        "Top cloud platforms: AWS (Amazon), Azure (Microsoft), and GCP (Google). AWS is most popular! 💡",
+        "Cloud skills are in huge demand! Start with AWS Free Tier and get certified 🚀"
+      ]
+    },
+
+    {
+      "tag": "health",
+      "patterns": [
+        "health tips", "how to stay healthy", "healthy lifestyle",
+        "how to be fit", "tips for good health", "healthy habits",
+        "mental health tips", "physical health", "how to improve health",
+        "wellness tips", "how to stay fit", "daily health routine"
+      ],
+      "responses": [
+        "Eat balanced meals, exercise daily, sleep 7-8 hours, and drink plenty of water! 💧",
+        "Mental health matters too! Meditate, take breaks, and talk to someone you trust 🧘",
+        "Small healthy habits compound over time. Start with 30 min of walking daily! 🚶"
+      ]
+    },
+
+    {
+      "tag": "exercise",
+      "patterns": [
+        "exercise tips", "how to exercise", "workout tips",
+        "best exercise", "how to start working out", "fitness tips",
+        "home workout", "gym tips", "how to lose weight",
+        "how to build muscle", "cardio tips", "yoga benefits"
+      ],
+      "responses": [
+        "Start with 30 minutes of exercise 3-4 times a week. Consistency beats intensity! 💪",
+        "Mix cardio and strength training for best results. Don't skip rest days! 🏋️",
+        "Home workouts are effective too — try push-ups, squats, and planks to start! 🔥"
+      ]
+    },
+
+    {
+      "tag": "food_diet",
+      "patterns": [
+        "diet tips", "healthy food", "what to eat", "healthy diet",
+        "nutrition tips", "how to eat healthy", "best diet",
+        "foods to eat", "foods to avoid", "balanced diet",
+        "weight loss diet", "protein foods", "healthy snacks"
+      ],
+      "responses": [
+        "Eat a balanced diet: proteins, healthy fats, complex carbs, fruits, and vegetables! 🥗",
+        "Avoid processed food and sugary drinks. Drink at least 8 glasses of water daily! 💧",
+        "Meal prep on weekends to eat healthy throughout the week — saves time and money! 🍱"
+      ]
+    },
+
+    {
+      "tag": "sports",
+      "patterns": [
+        "cricket", "football", "basketball", "tennis", "chess",
+        "sports tips", "favorite sport", "best sport",
+        "how to play cricket", "how to play football",
+        "ipl", "world cup", "sports news", "sportsperson"
+      ],
+      "responses": [
+        "Sports build teamwork, discipline, and physical fitness! What sport do you play? ⚽🏏",
+        "Cricket is massive in India! The IPL and World Cup are always thrilling! 🏏",
+        "Football is the world's most popular sport — played by over 250 million people! ⚽"
+      ]
+    },
+
+    {
+      "tag": "movies",
+      "patterns": [
+        "recommend a movie", "good movies to watch", "best movies",
+        "movie suggestions", "what movie should i watch",
+        "hollywood movies", "bollywood movies", "sci-fi movies",
+        "action movies", "comedy movies", "thriller movies"
+      ],
+      "responses": [
+        "Must-watch movies: Inception, Interstellar, The Dark Knight, 3 Idiots, and Avengers! 🎬",
+        "For sci-fi: Interstellar, The Matrix, Arrival. For comedy: The Grand Budapest Hotel 🍿",
+        "Bollywood picks: 3 Idiots, Dangal, Dil Chahta Hai — all-time classics! 🎥"
+      ]
+    },
+
+    {
+      "tag": "books",
+      "patterns": [
+        "recommend a book", "good books to read", "best books",
+        "book suggestions", "what book should i read",
+        "self help books", "programming books", "motivational books",
+        "books for students", "books to improve mindset"
+      ],
+      "responses": [
+        "Must-reads: Atomic Habits, The Alchemist, Rich Dad Poor Dad, and Deep Work! 📚",
+        "For programming: Clean Code, The Pragmatic Programmer, SICP are classics! 💻",
+        "Self-help picks: Atomic Habits, The 7 Habits of Highly Effective People, Mindset by Dweck 📖"
+      ]
+    },
+
+    {
+      "tag": "technology",
+      "patterns": [
+        "latest technology", "new technology", "future technology",
+        "technology trends", "best technologies to learn",
+        "top tech skills", "technology news", "innovations",
+        "what is blockchain", "what is iot", "what is ar vr"
+      ],
+      "responses": [
+        "Top tech trends: AI/ML, Cloud Computing, Cybersecurity, Blockchain, and AR/VR! 🚀",
+        "The future is AI-driven! Skills in machine learning and cloud are highly valuable! 💡",
+        "Blockchain enables decentralized, secure transactions — it powers cryptocurrency! 🔗"
+      ]
+    },
+
+    {
+      "tag": "internet",
+      "patterns": [
+        "what is internet", "how does internet work", "internet tips",
+        "internet speed", "how to improve internet speed",
+        "what is wifi", "internet safety", "online safety tips",
+        "what is vpn", "benefits of internet"
+      ],
+      "responses": [
+        "The internet is a global network connecting billions of devices worldwide! 🌐",
+        "For internet safety: use strong passwords, enable 2FA, and avoid public WiFi for sensitive tasks! 🔐",
+        "A VPN (Virtual Private Network) encrypts your connection and protects your privacy online! 🛡️"
+      ]
+    },
+
+    {
+      "tag": "time_management",
+      "patterns": [
+        "time management tips", "how to manage time", "productivity tips",
+        "how to be productive", "how to stop procrastinating",
+        "beat procrastination", "daily routine tips", "morning routine",
+        "how to plan your day", "daily schedule tips", "work life balance"
+      ],
+      "responses": [
+        "Plan your day the night before. Use a to-do list and prioritize your top 3 tasks! 📋",
+        "Use the 2-minute rule: if a task takes less than 2 minutes, do it now! ⏱️",
+        "Block distractions during deep work. Try apps like Forest or Focus@Will! 🌳",
+        "Work-life balance is key. Schedule rest and fun just like you schedule work! ⚖️"
+      ]
+    },
+
+    {
+      "tag": "finance",
+      "patterns": [
+        "money tips", "how to save money", "personal finance",
+        "financial tips", "how to manage money", "investment tips",
+        "how to invest", "savings tips", "how to become rich",
+        "financial freedom", "budget tips", "how to make more money"
+      ],
+      "responses": [
+        "Save at least 20% of your income. Track every expense using apps like Money Manager! 💰",
+        "Start investing early — even small amounts in index funds grow significantly over time! 📈",
+        "Follow the 50-30-20 rule: 50% needs, 30% wants, 20% savings and investments! 💡"
+      ]
+    },
+
+    {
+      "tag": "communication_skills",
+      "patterns": [
+        "improve communication skills", "public speaking tips",
+        "how to speak confidently", "communication tips",
+        "how to talk to people", "how to present well",
+        "presentation tips", "how to improve english",
+        "body language tips", "how to make friends",
+        "social skills tips", "how to network"
+      ],
+      "responses": [
+        "Practice speaking daily. Join clubs like Toastmasters to build confidence! 🗣️",
+        "Listen actively, make eye contact, and speak clearly — 3 pillars of great communication! 👁️",
+        "Read books and watch English content daily to naturally improve your language skills! 📚"
+      ]
+    },
+
+    {
+      "tag": "weather",
+      "patterns": [
+        "what is the weather", "weather today", "is it raining",
+        "weather forecast", "temperature today", "will it rain",
+        "weather update", "climate today"
+      ],
+      "responses": [
+        "I don't have access to live weather data right now 🌤️ Check weather.com or Google for the latest!",
+        "For real-time weather, try asking Google: 'weather in [your city]' 🌦️"
+      ]
+    },
+
+    {
+      "tag": "jokes",
+      "patterns": [
+        "tell me a joke", "say something funny", "make me laugh",
+        "crack a joke", "funny joke", "tell a joke",
+        "i need a laugh", "entertain me", "joke please"
+      ],
+      "responses": [
+        "Why do programmers hate nature? Too many bugs! 😂",
+        "Why did the developer go broke? He used all his cache! 😄",
+        "Why do Java developers wear glasses? They don't C#! 😆",
+        "What's a computer's favourite snack? Microchips! 🍟",
+        "Why was the math book sad? It had too many problems! 📚",
+        "I told my computer I needed a break. Now it won't stop sending me Kit-Kat ads! 😅"
+      ]
+    },
+
+    {
+      "tag": "general_knowledge",
+      "patterns": [
+        "general knowledge", "gk questions", "quiz me", "fun facts",
+        "interesting facts", "did you know", "trivia",
+        "science facts", "space facts", "history facts"
+      ],
+      "responses": [
+        "Fun fact: Honey never spoils! Archaeologists found 3000-year-old honey in Egyptian tombs 🍯",
+        "Did you know? Octopuses have three hearts and blue blood! 🐙",
+        "Space fact: A day on Venus is longer than a year on Venus! 🪐",
+        "Science fact: The human body has more bacteria cells than human cells! 🦠"
+      ]
+    },
+
+    {
+      "tag": "positive_affirmation",
+      "patterns": [
+        "cheer me up", "say something positive", "i need positivity",
+        "positive quote", "good vibes", "make me feel better",
+        "uplift me", "words of encouragement", "i need support"
+      ],
+      "responses": [
+        "You are stronger than you think! Keep going 💪",
+        "Every day is a new chance to grow. Make it count! 🌟",
+        "Believe in yourself — you are capable of great things! 🚀",
+        "You've got this! One step at a time 😊",
+        "The best is yet to come. Stay positive! ✨"
+      ]
     }
+
   ]
 }
